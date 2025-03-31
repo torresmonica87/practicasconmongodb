@@ -16,6 +16,9 @@ cd "C:\Program Files\MongoDB\Server\8.0\bin"
   show collections ....muestra lo que contiene la carpeta bd elegida ej cursos contiene alumnos
   db.alumnos.find() .... esto muestra los datos contenidos en alumnos
 
+  
+USANDO ESTO PUEDO CITAR SOLO A UNO 
+curso> db.alumnos.findOne ({n_cuenta: 3})
 
 
 
@@ -103,3 +106,7 @@ const mongoose = require('mongoose');
 
 // Conectar a la base de datos MongoDB en localhost, con el nombre de base de datos 'tu_base_de_datos'
 mongoose.connect('mongodb://localhost:27017/tu_base_de_datos')
+
+
+
+
