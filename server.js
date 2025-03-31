@@ -18,3 +18,4 @@ mongoose.connect('mongodb://localhost:27017/tu_base_de_datos')
     });
 
     // INVESTIGAR como haria para consultar solo un estudiante de la bd 
+    // como ocultar el _id: ObjectId???
