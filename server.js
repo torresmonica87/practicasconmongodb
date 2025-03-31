@@ -16,3 +16,5 @@ mongoose.connect('mongodb://localhost:27017/tu_base_de_datos')
     .catch(err => {
         console.error('Error al conectar con la base de datos:', err);
     });
+
+    // INVESTIGAR como haria para consultar solo un estudiante de la bd 
