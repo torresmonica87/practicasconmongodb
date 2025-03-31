@@ -7,7 +7,7 @@ en la power shell ponemos
 
 cd "C:\Program Files\MongoDB\Server\8.0\bin"
 
-.\mongod.exe
+.\mongosh.exe
  DE ESTA MANERA QUEDÓ INSTALADO mongosh
 
  ahora sólo bastó colocar:
