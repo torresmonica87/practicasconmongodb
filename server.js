@@ -2,15 +2,20 @@ const mongoose = require('mongoose');
 const app = require('./app');
 const port = 3700;
 
-mongoose.connect('mongodb://localhost:27017/curso')
+mongoose.set('strictQuery', false);
+
+mongoose.connect('mongodb://localhost:27017/tu_base_de_datos')
     .then(() => {
         console.log('Conexión a la base de datos establecida con éxito');
 
-        // Crearemos el servidor
-        var server = app.listen(port, () => {
-            console.log("Servidor corriendo correctamente en la URL: http://localhost:" + port);
+    
+        app.listen(port, () => {
+            console.log(`Servidor funcionando correctamente en la URL: http://localhost:${port}`);
         });
     })
-    .catch(err => console.log(err));
+    .catch(err => {
+        console.error('Error al conectar con la base de datos:', err);
+    });
 
-
+    //LA CONEXION SE ESTABLECE CON EL SERVIDOR PERO DEBO INVESTIGAR COMO PUEDO LLAMAR DESDE LA TERMINAL
+    //LO QUE CONTIENE BD , DEBO INVESTIGAR COMO SE QUE LA CONEXION BD ES EXITOSA
