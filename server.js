@@ -17,5 +17,5 @@ mongoose.connect('mongodb://localhost:27017/tu_base_de_datos')
         console.error('Error al conectar con la base de datos:', err);
     });
 
-    // INVESTIGAR como haria para consultar solo un estudiante de la bd 
-    // como ocultar el _id: ObjectId???
+ 
+    // como ocultar el _id: ObjectId??? IMPORTANTE INVESTIGAR
