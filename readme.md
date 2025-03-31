@@ -10,13 +10,17 @@ cd "C:\Program Files\MongoDB\Server\8.0\bin"
 .\mongosh.exe
  DE ESTA MANERA QUEDÓ INSTALADO mongosh
 
+
+ YA QUEDÓ PARA QUE SOLO PONGA mongosh EN LA TERMINAL VS CODE Y DE AHI SHOW DBS Y DEMAS PARA CONSULTAR LA BD
+ 
+
  ahora sólo bastó colocar:
   show dbs ....muestra las bd listas
   use curso ......aqui elegimod la bd
   show collections ....muestra lo que contiene la carpeta bd elegida ej cursos contiene alumnos
   db.alumnos.find() .... esto muestra los datos contenidos en alumnos
 
-  
+
 USANDO ESTO PUEDO CITAR SOLO A UNO 
 curso> db.alumnos.findOne ({n_cuenta: 3})
 
