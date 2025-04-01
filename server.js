@@ -19,3 +19,4 @@ mongoose.connect('mongodb://localhost:27017/tu_base_de_datos')
 
  
     // como ocultar el _id: ObjectId??? IMPORTANTE INVESTIGAR
+    //como cargar datos a mongodb desde vscode INVESTIGAR
