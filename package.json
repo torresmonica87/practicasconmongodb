@@ -1,0 +1,16 @@
+{
+  "name": "conmongodb",
+  "version": "1.0.0",
+  "description": "para ver los datos contenidos en bd. no estaba el archivo mongosh en bin entonces tocó descargarlo por aparte y luego de eso hacer la siguiente configuración para poder ver el contenido de la base de datos en la terminal",
+  "main": "api.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express-validator": "^7.2.1"
+  }
+}

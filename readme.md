@@ -114,3 +114,18 @@ mongoose.connect('mongodb://localhost:27017/tu_base_de_datos')
 
 
 
+solucion de problemas con el express_validator por un guion y no estaba instalado ademas nos salia en el packagesjson las dependencies se instaló npm install express-validator
+ y se creo el gitignore para guardar node_modules/
+ que se creo de la instalcion de paquete
+
+npm install express-validator --save
+npm init -y
+npm install express-validator
+ls package.json
+node server.js
+npm list express-validator
+
+se borró el anterio paksjson y lock porque se creo uno nuevo que tenia las dependencies instaladas con los pasos anteriores con ello se ejecuto nuevamente sin problemas..
+
+
+
