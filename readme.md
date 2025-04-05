@@ -1,3 +1,37 @@
+# de esta forma está la base de datos en mongodb 
+ESTA LA BASE DE DATOS curso que contiene alumnos y usuarios ejemplo
+asi: 
+
+curso 
+│
+├── alumnos 
+│ contenido abajo EN ALUMNOS EJEMPLO
+│
+├── usuarios 
+  contenido abajo EN USUARIOS EJEMPLO
+
+
+# EN ALUMNOS EJEMPLO:
+/** 
+* Paste one or more documents here
+*/
+{
+  "n_cuenta": 1,
+  "nombre": "Monica Torres",
+  "edad": 38,
+  "genero": "F"
+}
+
+# EN USUARIOS EJEMPLO
+/** 
+* Paste one or more documents here
+*/
+{
+  "mail": "torresmonica87@gmail.com",
+  "pass": "123"
+}
+
+# instalando mongosh para poder ver el contenido de bd en la terminal vs code
 para ver los datos contenidos en bd. no estaba el archivo mongosh en bin entonces tocó descargarlo por aparte y luego de eso hacer la siguiente configuración para poder ver el contenido de la base de datos en la terminal 
 
 con net start MongoDB
@@ -13,21 +47,23 @@ cd "C:\Program Files\MongoDB\Server\8.0\bin"
 
  YA QUEDÓ PARA QUE SOLO PONGA mongosh EN LA TERMINAL VS CODE Y DE AHI SHOW DBS Y DEMAS PARA CONSULTAR LA BD
  
-
- ahora sólo bastó colocar:
+# pasos para ver el contenido de bd en la terminal una vez instalado mongosh
+ ahora sólo basta colocar:
+ mongosh
   show dbs ....muestra las bd listas
   use curso ......aqui elegimod la bd
   show collections ....muestra lo que contiene la carpeta bd elegida ej cursos contiene alumnos
   db.alumnos.find() .... esto muestra los datos contenidos en alumnos
 
 
-USANDO ESTO PUEDO CITAR SOLO A UNO 
+# USANDO ESTO PUEDO CITAR SOLO A UNO 
 curso> db.alumnos.findOne ({n_cuenta: 3})
 
 
 
-PARA QUE SIRVE LO QUE USAMOS EN EL CODIGO
+# PARA QUE SIRVE LO QUE USAMOS EN EL CODIGO
 
+``` js 
 /* 'use strict' habilita el modo estricto, que ayuda a detectar errores potenciales en el código */
 
        var alumnoId = req.params.id; /* Obtiene el ID del alumno desde los parámetros de la solicitud */
@@ -110,14 +146,28 @@ const mongoose = require('mongoose');
 
 // Conectar a la base de datos MongoDB en localhost, con el nombre de base de datos 'tu_base_de_datos'
 mongoose.connect('mongodb://localhost:27017/tu_base_de_datos')
+```
 
 
 
+# avanzando en el ejercicio habia una parte donde se usaba express NO ESTABA INSTALADO
 
-solucion de problemas con el express_validator por un guion y no estaba instalado ademas nos salia en el packagesjson las dependencies se instaló npm install express-validator
+```js
+no funcionaba express usado en :
+
+api.js y auth.js
+
+const express = require('express');
+const router = express.Router();
+const AlumnosController = require('./controllers/alumnoscontrollers');
+let AuthController = require('./auth');
+```
+
+solucion de problemas con el express_validator por un guion y no estaba instalado ademas nos salia en el packagesjson las dependencies se instaló npm install express-validator (CUIDADO CON LOS CARACTERES )
  y se creo el gitignore para guardar node_modules/
  que se creo de la instalcion de paquete
 
+# pasos para instalar express
 npm install express-validator --save
 npm init -y
 npm install express-validator
