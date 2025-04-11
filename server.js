@@ -4,7 +4,7 @@ const port = 3700;
 
 mongoose.set('strictQuery', false);
 
-mongoose.connect('mongodb://localhost:27017/tu_base_de_datos')
+mongoose.connect('mongodb://localhost:27017/curso')
     .then(() => {
         console.log('Conexión a la base de datos establecida con éxito');
 
@@ -19,4 +19,4 @@ mongoose.connect('mongodb://localhost:27017/tu_base_de_datos')
 
  
     // como ocultar el _id: ObjectId??? IMPORTANTE INVESTIGAR
-    //como cargar datos a mongodb desde vscode INVESTIGAR
+
