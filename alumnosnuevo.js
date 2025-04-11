@@ -7,7 +7,7 @@ const Alumnos = require('./controllers/alumnos');
 mongoose.set('strictQuery', false);
 
 // Conexión a la base de datos
-mongoose.connect('mongodb://localhost:27017/tu_base_de_datos')
+mongoose.connect('mongodb://localhost:27017/curso')
     .then(() => {
         console.log('Conexión a la base de datos establecida con éxito');
         // Llamar a la función para agregar un nuevo alumno
@@ -21,8 +21,8 @@ mongoose.connect('mongodb://localhost:27017/tu_base_de_datos')
 function agregarNuevoAlumno() {
     // Crear un nuevo objeto alumno con los datos que quieres guardar
     const nuevoAlumno = new Alumnos({
-        n_cuenta: 5, 
-        nombre: "Lucas Quiñonez", 
+        n_cuenta: 6, 
+        nombre: "Lucas Perez", 
         edad: 25, 
         genero: "M" 
     });
