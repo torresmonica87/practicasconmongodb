@@ -152,7 +152,7 @@ mongoose.connect('mongodb://localhost:27017/tu_base_de_datos')
 
 # avanzando en el ejercicio habia una parte donde se usaba express NO ESTABA INSTALADO
 
-```js
+``` js
 no funcionaba express usado en :
 
 api.js y auth.js
@@ -177,5 +177,18 @@ npm list express-validator
 
 se borró el anterio paksjson y lock porque se creo uno nuevo que tenia las dependencies instaladas con los pasos anteriores con ello se ejecuto nuevamente sin problemas..
 
+## ESTA LINEA NOS PERMITE CREAR UNA BASE DE DATOS DESDE LA TERMINAL
 
+``` js
+
+mongoose.connect('mongodb://localhost:27017/curso'
+
+```
+
+mongodb     es la base de datos que usamos
+ 
+://localhost:27017     es la ruta 
+
+
+/curso   este es el nombre de la bd que crearás desde la terminal o .. si ya la tienes creada desde bd solo coloca el nombre de la bd que creaste desde Mongodb
 
